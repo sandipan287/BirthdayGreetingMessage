@@ -1,0 +1,80 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+input {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+button {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff3b6b;
+}
+
+.message {
+  display: none;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.wish-note {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255,255,255,0.8);
+  font-size: 20px;
+  animation: float 5s infinite ease-in;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(1); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
